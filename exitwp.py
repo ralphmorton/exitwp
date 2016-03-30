@@ -154,7 +154,7 @@ def parse_wp_xml(file):
                 'title': gi('title'),
                 'author': gi('dc:creator'),
                 'date': gi('wp:post_date_gmt'),
-                'slug': gi('wp:post_name'),
+                'slug': gi('wp:post_id'),
                 'status': gi('wp:status'),
                 'type': gi('wp:post_type'),
                 'wp_id': gi('wp:post_id'),
