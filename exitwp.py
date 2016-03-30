@@ -154,7 +154,7 @@ def parse_wp_xml(file):
                 'title': gi('title'),
                 'author': gi('dc:creator'),
                 'date': gi('wp:post_date_gmt'),
-                'slug': gi('wp:post_id'),
+                'slug': gi('wp:post_name'),
                 'status': gi('wp:status'),
                 'type': gi('wp:post_type'),
                 'wp_id': gi('wp:post_id'),
@@ -213,7 +213,7 @@ def write_jekyll(data, target_format):
                 dt = datetime.strptime(item['date'], date_fmt)
                 uid.append(dt.strftime('%Y-%m-%d'))
                 uid.append('-')
-            s_title = item['slug']
+            s_title = item['wp_id']
             if s_title is None or s_title == '':
                 s_title = item['title']
             if s_title is None or s_title == '':
